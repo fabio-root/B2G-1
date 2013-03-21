@@ -28,8 +28,8 @@ case `uname` in
 	exit -1
 esac
 
-GITREPO=${GITREPO:-"git://github.com/mozilla-b2g/b2g-manifest"}
-BRANCH=${BRANCH:-v1-train}
+GITREPO=${GITREPO:-"git://github.com/fergy/B2G"}
+BRANCH=${BRANCH:-master}
 
 GIT_TEMP_REPO="tmp_manifest_repo"
 if [ -n "$2" ]; then
@@ -96,6 +96,16 @@ case "$1" in
 	repo_sync emulator
 	;;
 
+"iphone3G")
+	echo DEVICE=iphone3G >> .tmp-config &&
+	repo_sync $1
+	;;
+
+"ipt1G")
+	echo DEVICE=ipt1G >> .tmp-config &&
+	repo_sync $1
+	;;
+
 *)
 	echo Usage: $0 \(device name\)
 	echo
@@ -111,6 +121,8 @@ case "$1" in
 	echo - pandaboard
 	echo - emulator
 	echo - emulator-x86
+	echo - iphone3G
+	echo - ipt1G
 	exit -1
 	;;
 esac
