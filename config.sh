@@ -106,6 +106,10 @@ case "$1" in
 	repo_sync $1
 	;;
 
+"optimus-l3")
+	echo DEVICE=optimus-l3 >> .tmp-config &&
+	repo_sync $1
+	;;
 *)
 	echo Usage: $0 \(device name\)
 	echo
@@ -123,6 +127,7 @@ case "$1" in
 	echo - emulator-x86
 	echo - iphone3G
 	echo - ipt1G
+	echo - optimus-l3
 	exit -1
 	;;
 esac
