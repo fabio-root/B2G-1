@@ -107,7 +107,7 @@ case "$1" in
 	;;
 
 "optimus-l3")
-	echo DEVICE=optimus-l3 >> .tmp-config &&
+	echo DEVICE=e400 >> .tmp-config &&
 	repo_sync $1
 	;;
 *)
