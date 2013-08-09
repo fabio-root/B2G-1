@@ -247,6 +247,10 @@ case "$DEVICE" in
 	flash_heimdall $PROJECT
 	;;
 
+"optimus-l3")
+	flash_fastboot unlock $PROJECT
+	;;
+
 *)
 	if [[ $(type -t flash_${DEVICE}) = function ]]; then
 		flash_${DEVICE} $PROJECT
