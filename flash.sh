@@ -247,7 +247,7 @@ case "$DEVICE" in
 	flash_heimdall $PROJECT
 	;;
 
-"optimus-l3")
+"e400")
 	flash_fastboot unlock $PROJECT
 	;;
 
