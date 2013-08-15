@@ -248,7 +248,7 @@ case "$DEVICE" in
 	;;
 
 "e400")
-	flash_fastboot unlock $PROJECT
+	flash_fastboot nounlock $PROJECT
 	;;
 
 *)
